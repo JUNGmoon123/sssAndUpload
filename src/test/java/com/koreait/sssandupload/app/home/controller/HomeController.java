@@ -1,4 +1,4 @@
-package com.koreait.sssandupload.app.home.contoller;
+package com.koreait.sssandupload.app.home.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
