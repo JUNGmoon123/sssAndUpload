@@ -1,24 +1,15 @@
 package com.koreait.sssandupload.app.security.service;
 
-import com.koreait.sssandupload.app.member.entity.Member;
-import com.koreait.sssandupload.app.security.dto.MemberContext;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
 
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
 public class OAuth2UserService extends DefaultOAuth2UserService {
-
+/*
     @Override
     @Transactional
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
@@ -59,11 +50,11 @@ public class OAuth2UserService extends DefaultOAuth2UserService {
         authorities.add(new SimpleGrantedAuthority("USER"));
         return new MemberContext(member, authorities, attributes, userNameAttributeName);
     }
+*/
 
-
-
+/*
     private boolean isNew(String oAuthType, String oAuthId) {
         return memberRepository.findByUsername("%s_%s".formatted(oAuthType, oAuthId)).isEmpty();
     }
-
+*/
 }
