@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html layout:decorate="~{layout/layout.html}" xmlns="" xmlns:layout="http://www.w3.org/1999/xhtml">
+<html layout:decorate="~{layout/layout.html}" xmlns:layout="http://www.w3.org/1999/xhtml">
 
 <head>
     <title>메인</title>
@@ -10,7 +10,7 @@
 
     <div class="container">
         <header th:if="${loginedMember != null}">
-            user3 / <img th:src="@{${loginedMemberProfileImgUrl}}" alt="">
+            user / <img th:src="@{${loginedMemberProfileImgUrl}}" alt="">
         </header>
 
         <hr>
