@@ -1,5 +1,6 @@
 package com.koreait.sssandupload;
 
+import com.koreait.sssandupload.app.home.contoller.HomeController;
 import com.koreait.sssandupload.app.member.controller.MemberController;
 import com.koreait.sssandupload.app.member.entity.Member;
 import com.koreait.sssandupload.app.member.service.MemberService;
@@ -53,7 +54,7 @@ class AppTests {
         // 안녕
         resultActions
                 .andExpect(status().is2xxSuccessful())
-                .andExpect(handler().handlerType(com.koreait.sssandupload.app.home.contoller.HomeController.class))
+                .andExpect(handler().handlerType(HomeController.class))
                 .andExpect(handler().methodName("showMain"))
                 .andExpect(content().string(containsString("안녕")));
     }
