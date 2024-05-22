@@ -54,7 +54,7 @@ class AppTests {
         resultActions
                 .andExpect(status().is2xxSuccessful())
                 .andExpect(handler().handlerType(com.koreait.sssandupload.app.home.contoller.HomeController.class))
-                .andExpect(handler().methodName("main"))
+                .andExpect(handler().methodName("showMain"))
                 .andExpect(content().string(containsString("안녕")));
     }
 
