@@ -1,4 +1,3 @@
-
 package com.koreait.sssandupload.app.base;
 
 import org.springframework.context.annotation.Bean;
@@ -16,7 +15,13 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .csrf().disable()
-                .authorizeRequests().antMatchers("/**").permitAll();
+                .authorizeRequests()
+                .antMatchers("/**")
+                .permitAll()
+                .and()
+                .formLogin()
+                .loginPage("/member/login") // GET
+                .loginProcessingUrl("/member/login"); // POST
         return http.build();
     }
 
