@@ -1,3 +1,4 @@
+
 package com.koreait.sssandupload.app.member.repository;
 
 import com.koreait.sssandupload.app.member.entity.Member;

@@ -6,7 +6,7 @@ spring:
       client:
         registration:
           kakao:
-            clientId:
+            clientId: 2adc302cda51dc7f73cefc1f761f7b87
             scope: profile_nickname, profile_image
             client-name: Kakao
             authorization-grant-type: authorization_code
@@ -36,3 +36,6 @@ spring:
       ddl-auto: create
 custom:
   genFileDirPath: c:/Temp/sssApp
+logging:
+  level:
+    com.koreait.sssandupload.app: debug
