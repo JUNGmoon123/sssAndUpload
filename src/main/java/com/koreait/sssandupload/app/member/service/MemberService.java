@@ -1,8 +1,8 @@
-
 package com.koreait.sssandupload.app.member.service;
 
 import com.koreait.sssandupload.app.member.entity.Member;
 import com.koreait.sssandupload.app.member.repository.MemberRepository;
+import com.koreait.sssandupload.app.util.Util;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.GrantedAuthority;
@@ -33,8 +33,11 @@ public class MemberService implements UserDetailsService {
     }
 
     public Member join(String username, String password, String email, MultipartFile profileImg) {
-        String profileImgDirName = "member";
-        String fileName = UUID.randomUUID().toString() + ".png";
+        String profileImgDirName = "member/" + Util.date.getCurrentDateFormatted("yyyy_MM_dd");
+
+        String ext = Util.file.getExt(profileImg.getOriginalFilename());
+
+        String fileName = UUID.randomUUID() + "." + ext;
         String profileImgDirPath = genFileDirPath + "/" + profileImgDirName;
         String profileImgFilePath = profileImgDirPath + "/" + fileName;
 
