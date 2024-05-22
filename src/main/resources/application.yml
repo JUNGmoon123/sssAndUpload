@@ -6,7 +6,7 @@ spring:
       client:
         registration:
           kakao:
-            clientId: 2adc302cda51dc7f73cefc1f761f7b87
+            clientId:
             scope: profile_nickname, profile_image
             client-name: Kakao
             authorization-grant-type: authorization_code
