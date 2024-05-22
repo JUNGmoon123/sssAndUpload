@@ -16,7 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-
+import java.security.Principal;
 
 @Controller
 @RequestMapping("/member")
@@ -63,7 +63,6 @@ public class MemberController {
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/profile")
     public String showProfile(@AuthenticationPrincipal MemberContext memberContext, Model model) {
-        model.addAttribute("memberContext", memberContext);
 
         return "member/profile";
     }
