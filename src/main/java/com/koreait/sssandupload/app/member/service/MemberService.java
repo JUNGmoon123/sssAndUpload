@@ -1,3 +1,4 @@
+
 package com.koreait.sssandupload.app.member.service;
 
 import com.koreait.sssandupload.app.member.entity.Member;
@@ -87,5 +88,12 @@ public class MemberService implements UserDetailsService {
 
     public long count() {
         return memberRepository.count();
+    }
+
+    public void removeProfileImg(Member member) {
+        member.removeProfileImgOnStorage(); // 파일삭제
+        member.setProfileImg(null);
+
+        memberRepository.save(member);
     }
 }
